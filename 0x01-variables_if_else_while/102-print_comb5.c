@@ -22,7 +22,7 @@ putchar(i);
 putchar(' ');
 putchar(j);
 putchar(k);
-else if (a + i + j + k == 227 && a == 57)
+if (a + i + j + k == 227 && a == 57)
 {
 break;
 }
