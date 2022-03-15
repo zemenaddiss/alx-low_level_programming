@@ -5,8 +5,14 @@
  *
  *Return: 0 is success
  */
-int main()
+int main(void)
 {
-printf("%s ma\n");
+char*s = "_putchar";
+while (*s != 0)
+{
+-putchar(*s);
+s++;
+}
+-putchar("\n");
 return (0);
 }
