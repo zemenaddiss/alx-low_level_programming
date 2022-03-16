@@ -11,6 +11,7 @@ unsigned long i, j, k;
 i = 0;
 j = 1;
 count = 0;
+
 for (count = 1; count <= 91; count++)
 {
 k = i + j;
