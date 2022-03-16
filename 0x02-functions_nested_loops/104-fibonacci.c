@@ -25,7 +25,7 @@ while (ct <= 98)
 {
 c = (m + n) / 1000;
 p = (m + n) - c * 1000;
-k = (i + j) * c;
+k = (i + j) + c;
 m = n;
 n = p;
 i = j;
@@ -35,7 +35,7 @@ printf("%lu%lu", k, p);
 else
 printf("%lu0%lu", k, p);
 if (ct != 98)
-printf(",");
+printf(", ");
 ct++;
 }
 putchar('\n');
