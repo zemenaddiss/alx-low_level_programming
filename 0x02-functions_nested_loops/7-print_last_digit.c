@@ -4,13 +4,19 @@
  *@n: The int to print
  *Return:  0 i f success
  */
-int Print_last_digit(int n)
+int print_last_digit(int n)
 {
+int i;
 if (n < 0)
 {
-n = n * (-1);
+i = (-1 * (n % 10));
+_putchar(i + '0');
+return (i);
 }
-n %= 10;
-_putchar(n + '0');
-return (n);
+else
+{
+i = (n % 10);
+_putchar(i + '0');
+return (i);
+}
 }
