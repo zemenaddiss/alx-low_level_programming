@@ -9,6 +9,7 @@ int count;
 unsigned long k, m, n, p, c;
 unsigned long i = 0;
 unsigned long j = 1;
+count = 0;
 for (count = 1; count <= 91; count++)
 {
 k = i + j;
