@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-unsigned long cout, k;
+unsigned long count, k;
 unsigned long i = 0;
 unsigned long sum = 0;
 unsigned long j = 1;
