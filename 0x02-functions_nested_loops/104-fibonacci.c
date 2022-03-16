@@ -10,8 +10,7 @@ unsigned long i, j, k, m, n, p, c;
 ct = 0;
 i = 0;
 j = 1;
-for (ct = 1; ct <= 98;
-ct++)
+for (ct = 1; ct <= 98; ct++)
 {
 k = i + j;
 i = j;
@@ -26,7 +25,7 @@ while (ct <= 98)
 {
 c = (m + n) / 1000;
 p = (m + n) - c * 1000;
-k = (i + j) + c;
+k = (i + j) * c;
 m = n;
 n = p;
 i = j;
