@@ -14,7 +14,7 @@ for (count = 1; count <= 91; count++)
 k = i + j;
 i = j;
 j = k;
-printf("%lu,", k);
+printf("%lu, ", k);
 }
 m = i % 1000;
 i = i / 1000;
@@ -34,7 +34,7 @@ printf("%lu%lu", k, p);
 else
 printf("%lu0%lu", k, p);
 if (count != 98)
-printf(",");
+printf(", ");
 count++;
 }
 putchar('\n');
