@@ -7,10 +7,9 @@ int main(void)
 {
 int ct;
 unsigned long i, j, k, m, n, p, c;
-ct = 0;
 i = 0;
 j = 1;
-for (ct = 1; ct <= 98; ct++)
+for (ct = 1; ct <= 91; ct++)
 {
 k = i + j;
 i = j;
