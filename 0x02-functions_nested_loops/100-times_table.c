@@ -42,7 +42,7 @@ _putchar((c % 10) + '0');
 if (b != n)
 _putchar(',');
 }
-_putchar('\n);
+_putchar('\n');
 }
 }
 }
