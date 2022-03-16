@@ -6,9 +6,9 @@
 int main(void)
 {
 int count;
-unsigned long i, j, k, m, n, p, c;
-i = 0;
-j = 1;
+unsigned long k, m, n, p, c;
+unsigned long i = 0;
+unsigned long j = 1;
 for (count = 1; count <= 91; count++)
 {
 k = i + j;
