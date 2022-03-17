@@ -27,7 +27,7 @@ n1 = n1 / 10;
 _putchar((n2 / k) + '0');
 k = k / 10;
 for (i = k; i >= 1; i = i / 10)
-_putchar((m2 / i) % 10 + '0');
+_putchar((n2 / i) % 10 + '0');
 }
 else
 _putchar(n1 + '0');
