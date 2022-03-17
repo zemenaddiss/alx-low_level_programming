@@ -12,11 +12,13 @@ int i;
 int k = 1;
 if (n < 0)
 {
-n = n * -1;
+n = n * (-1);
 _putchar('-');
 }
+
 n1 = n;
 n2 = n1;
+
 if (n1 > 9)
 {
 while (n1 >= 10)
