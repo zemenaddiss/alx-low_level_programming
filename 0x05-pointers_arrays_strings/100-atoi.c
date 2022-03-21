@@ -11,12 +11,12 @@ int _atoi(char *s)
 {
 	int i = 0;
 	int n = 0;
-	int k = 1;
+	int signo = 1;
 
 	while ((s[i] < '0' || s[i] > '9') && s[i] != 0)
 	{
 		if (s[i] == '-')
-			k *= -1;
+			signo *= -1;
 		i++;
 	}
 	while ((s[i] >= '0' && s[i] <= '9') && s[i] != 0)
@@ -32,5 +32,7 @@ int _atoi(char *s)
 			i++;
 		}
 	}
-	k *= -1;
+	signo *= -1;
+	return (n * signo);
+}
 	return (n * k);
