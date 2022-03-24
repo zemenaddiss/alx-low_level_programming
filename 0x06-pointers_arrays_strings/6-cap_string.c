@@ -1,52 +1,36 @@
 #include "main.h"
-
 /**
  * cap_string - capitalizes all words of a string.
  * @s: Pointer to Char
  * Return: char.
  */
+char *cap_string(char *ch)
+{
+	int i = 0;
 
-
-int separator(char c)
-{
-switch (c)
-{
-case ' ':
-case '\t':
-case '\n':
-case ',':
-case ';':
-case '.':
-case '!':
-case '?':
-case '"':
-case '(':
-case ')':
-case '{':
-case '}':
-return (1);
-default:
-return (0);
-}
-}
-/**
- * cap_string - capitalizes all words of a string
- * @s: string to uppercase
- * Return: returns the modified string
- */
-char *cap_string(char *s)
-{
-int count, upper;
-upper = -32;
-count = 0;
-while (s[count] != '\0')
-{
-if (s[count] >= 'a' && s[count] <= 'z')
-{
-if (s[count] == *s || separator(s[count - 1]))
-s[count] += upper;
-}
-count++;
-}
-return (s);
+	while (*(ch + i) != '\0')
+	{
+		if (i == 0)
+			*(ch + i) = *(ch + i) - ' ';
+		if (*(ch + i) == ' ' || *(ch + i) == '\t')
+			i++;
+		else if (*(ch + i) == '\n' || *(ch + i) == ',')
+			i++;
+		else if (*(ch + i) == ';' || *(ch + i) == '.')
+			i++;
+		else if (*(ch + i) == '!' || *(ch + i) == '?')
+			i++;
+		else if (*(ch + i) == '"' || *(ch + i) == '(')
+			i++;
+		else if (*(ch + i) == ')' || *(ch + i) == '{')
+			i++;
+		else if (*(ch + i) == '}')
+			i++;
+		if (*(ch + i) >= 97 && *(ch + i) <= 122)
+		{
+			*(ch + i) = *(ch + i) - ' ';
+			i++;
+		}
+	}
+	return (ch);
 }
