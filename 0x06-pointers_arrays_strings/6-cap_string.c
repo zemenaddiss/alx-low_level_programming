@@ -6,29 +6,47 @@
  * Return: char.
  */
 
+
+int separator(char c)
+{
+switch (c)
+{
+case ' ':
+case '\t':
+case '\n':
+case ',':
+case ';':
+case '.':
+case '!':
+case '?':
+case '"':
+case '(':
+case ')':
+case '{':
+case '}':
+return (1);
+default:
+return (0);
+}
+}
+/**
+ * cap_string - capitalizes all words of a string
+ * @s: string to uppercase
+ * Return: returns the modified string
+ */
 char *cap_string(char *s)
 {
-int k = 0;
-while (*(s + k) != '\0')
+int count, upper;
+upper = -32;
+count = 0;
+while (s[count] != '\0')
 {
-if (k == 0 && (*(s + k) >= 97 && *(s + k) <= 122))
+if (s[count] >= 'a' && s[count] <= 'z')
 {
-*(s + k) = *(s + k) - ' ';
- k++;
- }
- if (*(s + k) == ' ' || *(s + k) == '\n' || *(s + k) == '\t'
- || *(s + k) == ',' || *(s + k) == ';' || *(s + k) == '!'
- || *(s + k) == '?' || *(s + k) == '"' || *(s + k) == '('
- || *(s + k) == ')' || *(s + k) == '{' || *(s + k) == '}'
- || *(s + k) == '.')
- {
- k++;
- if (*(s + k) >= 97 && *(s + k) <= 122)
- {
- *(s + k) = *(s + k) - ' ';
- }
- }
- else
- k++;
- }
- return (s);
+if (s[count] == *s || separator(s[count - 1]))
+s[count] += upper;
+}
+count++;
+}
+return (s);
+}
