@@ -49,4 +49,4 @@ s[count] += upper;
 count++;
 }
 return (s);
-}6
+}
