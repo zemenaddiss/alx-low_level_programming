@@ -6,36 +6,25 @@
  * Return: return count
  **/
 unsigned int _strspn(char *s, char *accept)
-
 {
-	int i, j;
-	int count = 0;
-	char *str1, *str2;
+	unsigned int cont = 0;
+	int j = 0;
+	int flag;
 
-	str1 = s;
-	str2 = accept;
-
-	i = 0;
-	while (str1[i] != '\0')
+	while (*s != '\0')
 	{
+		flag = 0;
+		while (*(accept + j) != '\0')
+		{
+			if (*s == *(accept + j))
+				flag = 1;
+			j += 1;
+		}
 		j = 0;
-		while (str2[j] != '\0')
-		{
-			if (str2[j] == str1[i])
-			{
-				count++;
-				break;
-			}
-
-			j++;
-		}
-
-		if (s[i] != accept[j])
-		{
+		if (flag == 0)
 			break;
-		}
-
-		i++;
+		cont += 1;
+		s++;
 	}
-
-	return (count);
+	return (cont);
+}
