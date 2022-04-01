@@ -1,1 +1,0 @@
-Static liberaries readme file
