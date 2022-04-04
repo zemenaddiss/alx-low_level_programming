@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * strtow - splits a string into words
  * @str: string of words to be split
@@ -79,7 +80,7 @@ int endIndex(char *s, int index)
 }
 
 /**
- * countWords - counts numbers of words
+ * countWords - counts numbers of words in string
  * @s: input string
  * Return: number of words
  */
